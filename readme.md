@@ -4,7 +4,7 @@ This WordPress plugin adds default custom post type permalinks.
 
 ## Add permalink structure of custom post type
 
-By default, there is no some permalink of custom post type. The Custom Post Type Rewrite plugin adds permalink structure of custom post type. Following:
+By default, there are no some permalinks of custom post type. The Custom Post Type Rewrite plugin adds permalink structure of custom post type. Following:
 
 * date-based
 * author-based
