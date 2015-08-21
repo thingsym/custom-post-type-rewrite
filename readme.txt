@@ -5,8 +5,8 @@ Donate link:
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Tags: custom post type, permalink structure, permalink, permalinks
 Requires at least: 3.4.1
-Tested up to: 4.1
-Stable tag: 1.0.0
+Tested up to: 4.3
+Stable tag: 1.0.1
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,5 +32,8 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 == Changelog ==
 
+= 1.0.1 =
+* refactoring
+* add phpunit and tests
 = 1.0.0 =
 * Initial release
