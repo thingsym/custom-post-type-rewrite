@@ -24,6 +24,10 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 ## Changelog
 
+* Version 1.0.2
+	* fix add_rewrite_rule
+	* fix date-based permalink structure
+	* fix phpunit tests
 * Version 1.0.1
 	* refactoring
 	* add phpunit and tests

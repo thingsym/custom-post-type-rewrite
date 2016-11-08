@@ -1,6 +1,6 @@
 <?php
 
-class Custom_Post_Type_Rewrite_Test extends WP_UnitTestCase {
+class Custom_Post_Type_Rewrite__Post_Type_02_Test extends WP_UnitTestCase {
 
     public function setUp() {
         parent::setUp();
@@ -12,7 +12,9 @@ class Custom_Post_Type_Rewrite_Test extends WP_UnitTestCase {
                 'public' => true,
                 'rewrite' => array(
                     'slug' => 'test',
-                    'with_front' => false,
+                    'with_front' => true,
+                    'feeds' => false,
+                    'pages' => false,
                 ),
             )
         );
@@ -39,23 +41,23 @@ class Custom_Post_Type_Rewrite_Test extends WP_UnitTestCase {
         $this->Custom_Post_Type_Rewrite->set_rewrite();
         $wp_rewrite->flush_rules();
 
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/date/([0-9]{4})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/author/([^/]+)/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/author/([^/]+)/?$', $wp_rewrite->rules );
-        $this->assertArrayHasKey( 'test/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/([0-9]{1,2})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/date/([0-9]{4})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/author/([^/]+)/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/author/([^/]+)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'archives/test/?$', $wp_rewrite->rules );
 
     }
 
@@ -156,6 +158,38 @@ class Custom_Post_Type_Rewrite_Test extends WP_UnitTestCase {
         $this->assertArrayHasKey( 'test/author/([^/]+)/?$', $wp_rewrite->rules );
         $this->assertArrayHasKey( 'test/?$', $wp_rewrite->rules );
 
+    }
+
+    /**
+     * @test
+     * @group rewrite
+     * @runInSeparateProcess
+     * @preserveGlobalState disabled
+     */
+    function rewrite_case_5() {
+        global $wp_rewrite;
+        $wp_rewrite->init();
+        $wp_rewrite->set_permalink_structure( '/%post_id%/' );
+        $this->Custom_Post_Type_Rewrite->set_rewrite();
+        $wp_rewrite->flush_rules();
+
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/([0-9]{1,2})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/date/([0-9]{4})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/author/([^/]+)/page/?([0-9]{1,})/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/author/([^/]+)/?$', $wp_rewrite->rules );
+        $this->assertArrayHasKey( 'test/?$', $wp_rewrite->rules );
     }
 
 }
