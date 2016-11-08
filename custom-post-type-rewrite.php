@@ -47,7 +47,7 @@ class Custom_Post_Type_Rewrite {
 		$search = array( '%front%', '%post%', '%year%', '%monthnum%', '%day%', '%date%' );
 
 		$date = '';
-		if ( preg_match( '/\/archives/', $wp_rewrite->permalink_structure ) ) {
+		if ( preg_match( '/%post_id%/', $wp_rewrite->permalink_structure ) ) {
 			$date = '/date';
 		}
 
