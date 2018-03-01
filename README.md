@@ -22,6 +22,24 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 **IMPORTANT**: By default, WordPress will not work the Custom Post Type Rewrite. You need to refresh permalinks.
 
+## WordPress Plugin Directory
+
+Custom Post Type Rewrite is hosted on the WordPress Plugin Directory.
+
+[https://wordpress.org/plugins/custom-post-type-rewrite/](https://wordpress.org/plugins/custom-post-type-rewrite/)
+
+## Contribution
+
+### Patches and Bug Fixes
+
+Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
+
+1. Fork [Custom Post Type Rewrite](https://github.com/thingsym/custom-post-type-rewrite) from GitHub repository
+2. Create a feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Create new Pull Request
+
 ## Changelog
 
 * Version 1.0.2
@@ -33,3 +51,7 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 	* add phpunit and tests
 * Version 1.0.0
 	* Initial release
+
+## License
+
+Licensed under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html).

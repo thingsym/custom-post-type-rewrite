@@ -32,6 +32,11 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 == Changelog ==
 
+= 1.0.2 =
+* fix add_rewrite_rule
+* fix date-based permalink structure
+* fix phpunit tests
+
 = 1.0.1 =
 * refactoring
 * add phpunit and tests
