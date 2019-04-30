@@ -41,5 +41,11 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 = 1.0.1 =
 * refactoring
 * add phpunit and tests
+
 = 1.0.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+* Requires at least version 3.8 of the WordPress
