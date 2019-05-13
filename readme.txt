@@ -6,8 +6,8 @@ Link: https://github.com/thingsym/custom-post-type-rewrite
 Tags: custom post type, permalink structure, permalink, permalinks
 Requires at least: 3.8
 Requires PHP: 5.4
-Tested up to: 5.0.3
-Stable tag: 1.0.2
+Tested up to: 5.2.0
+Stable tag: 1.0.3
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,12 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 == Changelog ==
 
+= 1.0.3 =
+* fix indent and reformat with phpcs and phpcbf
+* add composer.json for test
+* add static code analysis config
+* change Requires at least from 3.4.1 to 3.8
+
 = 1.0.2 =
 * fix add_rewrite_rule
 * fix date-based permalink structure
@@ -41,5 +47,11 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 = 1.0.1 =
 * refactoring
 * add phpunit and tests
+
 = 1.0.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+* Requires at least version 3.8 of the WordPress
