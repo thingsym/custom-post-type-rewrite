@@ -1,32 +1,15 @@
 <?php
 /**
  * Plugin Name: Custom Post Type Rewrite
- * Plugin URI: https://github.com/thingsym/custom-post-type-rewrite
+ * Plugin URI:  https://github.com/thingsym/custom-post-type-rewrite
  * Description: This WordPress plugin adds default custom post type permalinks.
- * Version: 1.0.2
- * Author: thingsym
- * Author URI: http://www.thingslabo.com/
- * License: GPL2
+ * Version:     1.0.2
+ * Author:      thingsym
+ * Author URI:  http://www.thingslabo.com/
+ * License:     GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: custom-post-type-rewrite
  * Domain Path: /languages
- */
-
-/**
- *     Copyright 2015 thingsym (http://www.thingslabo.com/)
- *
- *     This program is free software; you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation; either version 2 of the License, or
- *     (at your option) any later version.
- *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with this program; if not, write to the Free Software
- *     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA
  */
 
 class Custom_Post_Type_Rewrite {
