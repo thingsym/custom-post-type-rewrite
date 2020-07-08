@@ -4,10 +4,10 @@ Contributors: thingsym
 Donate link:
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Tags: custom post type, permalink structure, permalink, permalinks
+Stable tag: 1.0.4
+Tested up to: 5.4.2
 Requires at least: 3.8
 Requires PHP: 5.4
-Tested up to: 5.2.0
-Stable tag: 1.0.3
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 **IMPORTANT**: By default, WordPress will not work the Custom Post Type Rewrite. You need to refresh permalinks.
 
 == Changelog ==
+
+= 1.0.4 =
+* fix rewrite_rule
 
 = 1.0.3 =
 * fix indent and reformat with phpcs and phpcbf
