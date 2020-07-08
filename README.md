@@ -42,6 +42,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.0.4
+	* fix rewrite_rule
 * Version 1.0.3
 	* fix indent and reformat with phpcs and phpcbf
 	* add composer.json for test
