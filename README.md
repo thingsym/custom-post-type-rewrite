@@ -44,6 +44,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.1.0
+	* tested up to 5.7.0
+	* separate a class into a class file
+	* add test case
+	* add sponsor link
+	* add FUNDING.yml
+	* add donate link
+	* update wordpress-test-matrix
+	* add GitHub actions for CI/CD, remove .travis.yml
 * Version 1.0.4
 	* fix rewrite_rule
 * Version 1.0.3
