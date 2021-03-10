@@ -3,78 +3,25 @@
  * Plugin Name: Custom Post Type Rewrite
  * Plugin URI:  https://github.com/thingsym/custom-post-type-rewrite
  * Description: This WordPress plugin adds default custom post type permalinks.
- * Version:     1.0.4
+ * Version:     1.1.0
  * Author:      thingsym
  * Author URI:  http://www.thingslabo.com/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: custom-post-type-rewrite
  * Domain Path: /languages
+ *
+ * @package         Custom_Post_Type_Rewrite
  */
 
-class Custom_Post_Type_Rewrite {
-
-	public function __construct() {
-		add_action( 'wp_loaded', array( $this, 'set_rewrite' ), 10 );
-	}
-
-	public function set_rewrite() {
-		global $wp_rewrite;
-
-		if ( ! $wp_rewrite->permalink_structure ) {
-			return;
-		}
-
-		$post_types = get_post_types(
-			array(
-				'_builtin'           => false,
-				'publicly_queryable' => true,
-				'show_ui'            => true,
-			)
-		);
-
-		$search = array( '%front%', '%post%', '%year%', '%monthnum%', '%day%', '%date%' );
-
-		$date = '';
-		if ( preg_match( '/%post_id%/', $wp_rewrite->permalink_structure ) ) {
-			$date = '/date';
-		}
-
-		$position = 'top';
-
-		foreach ( $post_types as $post_type ) {
-			if ( ! $post_type ) {
-				continue;
-			}
-
-			$slug  = get_post_type_object( $post_type )->rewrite['slug'] ? get_post_type_object( $post_type )->rewrite['slug'] : $post_type;
-			$front = get_post_type_object( $post_type )->rewrite['with_front'] ? $wp_rewrite->front : '';
-
-			$replace = array( preg_replace( '/^\//', '', $front ), $slug, $wp_rewrite->rewritereplace[0], $wp_rewrite->rewritereplace[1], $wp_rewrite->rewritereplace[2], $date );
-
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/%day%/page/?([0-9]{1,})/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/%day%/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/page/?([0-9]{1,})/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/page/?([0-9]{1,})/?$' ), 'index.php?year=$matches[1]&paged=$matches[2]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/?$' ), 'index.php?year=$matches[1]&post_type=' . $post_type, $position );
-
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/%day%/feed/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/%day%/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/feed/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/%monthnum%/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/feed/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&feed=$matches[2]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%%date%/%year%/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?year=$matches[1]&feed=$matches[2]&post_type=' . $post_type, $position );
-
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/author/([^/]+)/page/?([0-9]{1,})/?$' ), 'index.php?author_name=$matches[1]&paged=$matches[2]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/author/([^/]+)/?$' ), 'index.php?author_name=$matches[1]&post_type=' . $post_type, $position );
-
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?author_name=$matches[1]&feed=$matches[2]&post_type=' . $post_type, $position );
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' ), 'index.php?author_name=$matches[1]&feed=$matches[2]&post_type=' . $post_type, $position );
-
-			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/?$' ), 'index.php?post_type=' . $post_type, $position );
-		}
-	}
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
-$custom_post_type_rewrite = new Custom_Post_Type_Rewrite();
+define( '__CUSTOM_POST_TYPE_REWRITE__', __FILE__ );
+
+require_once plugin_dir_path( __FILE__ ) . 'inc/class-custom-post-type-rewrite.php';
+
+if ( class_exists( 'Custom_Post_Type_Rewrite' ) ) {
+	new Custom_Post_Type_Rewrite();
+};

@@ -1,11 +1,11 @@
 === Custom Post Type Rewrite ===
 
 Contributors: thingsym
-Donate link:
 Link: https://github.com/thingsym/custom-post-type-rewrite
+Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
-Stable tag: 1.0.4
-Tested up to: 5.6.0
+Stable tag: 1.1.0
+Tested up to: 5.7.0
 Requires at least: 3.8
 Requires PHP: 5.4
 License: GPL2 or later
@@ -31,7 +31,35 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 
 **IMPORTANT**: By default, WordPress will not work the Custom Post Type Rewrite. You need to refresh permalinks.
 
+= Test Matrix =
+
+For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
+
+= Contribution =
+
+Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
+
+* [custom-post-type-rewrite - GitHub](https://github.com/thingsym/custom-post-type-rewrite)
+* [Custom Post Type Rewrite - WordPress Plugin](https://wordpress.org/plugins/custom-post-type-rewrite/)
+
+If you would like to contribute, here are some notes and guidlines.
+
+* All development happens on the **develop** branch, so it is always the most up-to-date
+* The **master** branch only contains tagged releases
+* If you are going to be submitting a pull request, please submit your pull request to the **develop** branch
+* See about [forking](https://help.github.com/articles/fork-a-repo/) and [pull requests](https://help.github.com/articles/using-pull-requests/)
+
 == Changelog ==
+
+= 1.1.0 =
+* tested up to 5.7.0
+* separate a class into a class file
+* add test case
+* add sponsor link
+* add FUNDING.yml
+* add donate link
+* update wordpress-test-matrix
+* add GitHub actions for CI/CD, remove .travis.yml
 
 = 1.0.4 =
 * fix rewrite_rule
