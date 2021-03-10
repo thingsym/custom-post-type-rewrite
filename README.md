@@ -1,7 +1,5 @@
 # Introducing Custom Post Type Rewrite
 
-[![Build Status](https://travis-ci.org/thingsym/custom-post-type-rewrite.svg?branch=master)](https://travis-ci.org/thingsym/custom-post-type-rewrite)
-
 This WordPress plugin adds default custom post type permalinks.
 
 ## Add permalink structure of custom post type
@@ -27,6 +25,10 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 Custom Post Type Rewrite is hosted on the WordPress Plugin Directory.
 
 [https://wordpress.org/plugins/custom-post-type-rewrite/](https://wordpress.org/plugins/custom-post-type-rewrite/)
+
+## Test Matrix
+
+For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
 
 ## Contribution
 
