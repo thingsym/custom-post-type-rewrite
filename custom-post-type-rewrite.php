@@ -16,6 +16,7 @@ class Custom_Post_Type_Rewrite {
 
 	public function __construct() {
 		add_action( 'wp_loaded', array( $this, 'set_rewrite' ), 10 );
+		add_filter( 'plugin_row_meta', array( $this, 'plugin_metadata_links' ), 10, 2 );
 	}
 
 	public function set_rewrite() {
@@ -74,6 +75,30 @@ class Custom_Post_Type_Rewrite {
 
 			add_rewrite_rule( str_replace( $search, $replace, '%front%%post%/?$' ), 'index.php?post_type=' . $post_type, $position );
 		}
+	}
+
+	/**
+	 * Set links below a plugin on the Plugins page.
+	 *
+	 * Hooks to plugin_row_meta
+	 *
+	 * @see https://developer.wordpress.org/reference/hooks/plugin_row_meta/
+	 *
+	 * @access public
+	 *
+	 * @param array  $links  An array of the plugin's metadata.
+	 * @param string $file   Path to the plugin file relative to the plugins directory.
+	 *
+	 * @return array $links
+	 *
+	 * @since 1.1.0
+	 */
+	public function plugin_metadata_links( $links, $file ) {
+		if ( $file == plugin_basename( __FILE__ ) ) {
+			$links[] = '<a href="https://github.com/sponsors/thingsym">' . __( 'Become a sponsor', 'custom-post-type-rewrite' ) . '</a>';
+		}
+
+		return $links;
 	}
 }
 
