@@ -44,6 +44,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.1.1
+	* add timeout-minutes to workflows
+	* add phpunit-polyfills
+	* tested up to 5.8.0
+	* add .editorconfig
 * Version 1.1.0
 	* tested up to 5.7.0
 	* separate a class into a class file
