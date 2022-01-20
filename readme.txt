@@ -90,5 +90,8 @@ If you would like to contribute, here are some notes and guidlines.
 
 == Upgrade Notice ==
 
+= 1.1.2 =
+* Requires at least version 4.9 of the WordPress
+* Requires PHP version 5.6
 = 1.0.2 =
 * Requires at least version 3.8 of the WordPress
