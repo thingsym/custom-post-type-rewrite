@@ -4,7 +4,7 @@ Contributors: thingsym
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Tested up to: 5.8.0
 Requires at least: 4.9
 Requires PHP: 5.6
@@ -51,6 +51,14 @@ If you would like to contribute, here are some notes and guidlines.
 
 == Changelog ==
 
+= 1.1.2 =
+* update wp-plugin-unit-test.yml
+* bump up yoast/phpunit-polyfills version
+* change os to ubuntu-20.04 for ci
+* add Upgrade Notice
+* change requires at least to wordpress 4.9
+* change requires to PHP 5.6
+
 = 1.1.1 =
 * add timeout-minutes to workflows
 * add phpunit-polyfills
@@ -93,5 +101,6 @@ If you would like to contribute, here are some notes and guidlines.
 = 1.1.2 =
 * Requires at least version 4.9 of the WordPress
 * Requires PHP version 5.6
+
 = 1.0.2 =
 * Requires at least version 3.8 of the WordPress
