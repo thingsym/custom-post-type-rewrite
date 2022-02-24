@@ -44,6 +44,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.1.3
+	* fix 'Trying to get property 'permalink_structure' of non-object' warning
+	* change plugin initialization to plugins_loaded hook
+	* replace assert from assertEquals to assertSame
 * Version 1.1.2
 	* update wp-plugin-unit-test.yml
 	* bump up yoast/phpunit-polyfills version

@@ -4,7 +4,7 @@ Contributors: thingsym
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 Tested up to: 5.9.0
 Requires at least: 4.9
 Requires PHP: 5.6
@@ -50,6 +50,11 @@ If you would like to contribute, here are some notes and guidlines.
 * See about [forking](https://help.github.com/articles/fork-a-repo/) and [pull requests](https://help.github.com/articles/using-pull-requests/)
 
 == Changelog ==
+
+= 1.1.3 =
+* fix 'Trying to get property 'permalink_structure' of non-object' warning
+* change plugin initialization to plugins_loaded hook
+* replace assert from assertEquals to assertSame
 
 = 1.1.2 =
 * update wp-plugin-unit-test.yml
