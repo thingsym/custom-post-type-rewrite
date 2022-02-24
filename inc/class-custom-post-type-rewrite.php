@@ -22,7 +22,7 @@ class Custom_Post_Type_Rewrite {
 	public function set_rewrite() {
 		global $wp_rewrite;
 
-		if ( ! $wp_rewrite->permalink_structure ) {
+		if ( ! isset( $wp_rewrite->permalink_structure ) ) {
 			return;
 		}
 
