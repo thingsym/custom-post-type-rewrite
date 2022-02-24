@@ -25,7 +25,7 @@ class Custom_Post_Type_Rewrite__Post_Type_02_Test extends WP_UnitTestCase {
      * @group construct
      */
     function construct_case() {
-        $this->assertSame( 10, has_action( 'wp_loaded', array( $this->Custom_Post_Type_Rewrite, 'set_rewrite' ) ) );
+        $this->assertSame( 10, has_action( 'plugins_loaded', array( $this->Custom_Post_Type_Rewrite, 'set_rewrite' ) ) );
     }
 
     /**
