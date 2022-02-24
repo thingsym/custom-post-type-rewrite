@@ -20,8 +20,8 @@ class Test_Custom_Post_Type_Rewrite_Basic extends WP_UnitTestCase {
 	 * @group basic
 	 */
 	function constructor() {
-		$this->assertEquals( 10, has_action( 'wp_loaded', array( $this->custom_post_type_rewrite, 'set_rewrite' ) ) );
-		$this->assertEquals( 10, has_filter( 'plugin_row_meta', array( $this->custom_post_type_rewrite, 'plugin_metadata_links' ) ) );
+		$this->assertSame( 10, has_action( 'plugins_loaded', array( $this->custom_post_type_rewrite, 'set_rewrite' ) ) );
+		$this->assertSame( 10, has_filter( 'plugin_row_meta', array( $this->custom_post_type_rewrite, 'plugin_metadata_links' ) ) );
 	}
 
 	/**

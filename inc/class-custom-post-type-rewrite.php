@@ -15,14 +15,14 @@
 class Custom_Post_Type_Rewrite {
 
 	public function __construct() {
-		add_action( 'wp_loaded', array( $this, 'set_rewrite' ), 10 );
+		add_action( 'plugins_loaded', array( $this, 'set_rewrite' ), 10 );
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_metadata_links' ), 10, 2 );
 	}
 
 	public function set_rewrite() {
 		global $wp_rewrite;
 
-		if ( ! $wp_rewrite->permalink_structure ) {
+		if ( ! isset( $wp_rewrite->permalink_structure ) ) {
 			return;
 		}
 
