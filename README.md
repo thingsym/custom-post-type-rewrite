@@ -44,6 +44,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.1.4
+	* change mysql from version 8.0 to version 5.7 using docker image
+	* fix indent style
+	* change plugin initialization to wp_loaded hook
 * Version 1.1.3
 	* fix 'Trying to get property 'permalink_structure' of non-object' warning
 	* change plugin initialization to plugins_loaded hook
