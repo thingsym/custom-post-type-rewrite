@@ -15,7 +15,7 @@
 class Custom_Post_Type_Rewrite {
 
 	public function __construct() {
-		add_action( 'plugins_loaded', array( $this, 'set_rewrite' ), 10 );
+		add_action( 'wp_loaded', array( $this, 'set_rewrite' ), 10 );
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_metadata_links' ), 10, 2 );
 	}
 
