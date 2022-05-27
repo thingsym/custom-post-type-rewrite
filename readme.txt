@@ -4,8 +4,8 @@ Contributors: thingsym
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
-Stable tag: 1.1.4
-Tested up to: 5.9.0
+Stable tag: 1.2.0
+Tested up to: 6.0.0
 Requires at least: 4.9
 Requires PHP: 5.6
 License: GPL2 or later
@@ -20,6 +20,8 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 * date-based
 * author-based
 * front
+
+Note: Regarding has_archive and rewrite in $args of Parameters, the priority of the rewrite rule conforms to register_post_type().
 
 == Installation ==
 
@@ -50,6 +52,11 @@ If you would like to contribute, here are some notes and guidlines.
 * See about [forking](https://help.github.com/articles/fork-a-repo/) and [pull requests](https://help.github.com/articles/using-pull-requests/)
 
 == Changelog ==
+
+= 1.2.0 =
+* edit README
+* add test case
+* fix the priority of the rewrite rule of register_post_type()
 
 = 1.1.4 =
 * change mysql from version 8.0 to version 5.7 using docker image
