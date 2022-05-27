@@ -10,6 +10,8 @@ By default, there are no some permalinks of custom post type. The Custom Post Ty
 * author-based
 * front
 
+Note: Regarding has_archive and rewrite in $args of Parameters, the priority of the rewrite rule conforms to register_post_type().
+
 ## How do I use it?
 
 1. Download and unzip files. Or install Custom Post Type Rewrite plugin using the WordPress plugin installer. In that case, skip 2.
