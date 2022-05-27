@@ -48,8 +48,32 @@ class Custom_Post_Type_Rewrite {
 				continue;
 			}
 
-			$slug  = get_post_type_object( $post_type )->rewrite['slug'] ? get_post_type_object( $post_type )->rewrite['slug'] : $post_type;
-			$front = get_post_type_object( $post_type )->rewrite['with_front'] ? $wp_rewrite->front : '';
+			$type_obj = get_post_type_object( $post_type );
+
+			# The priority of the rewrite rule: has_archive < rewrite
+			# See https://developer.wordpress.org/reference/functions/register_post_type/
+			$slug = $post_type;
+			if ( is_string( $type_obj->has_archive ) ) {
+				$slug = $type_obj->has_archive;
+			}
+			if ( is_bool( $type_obj->rewrite ) && $type_obj->rewrite === true ) {
+				$slug = $post_type;
+			}
+			else if ( is_array( $type_obj->rewrite ) ) {
+				if ( ! empty( $type_obj->rewrite['slug'] ) ) {
+					$slug = $type_obj->rewrite['slug'];
+				}
+			}
+
+			$front = $wp_rewrite->front;
+			if ( is_bool( $type_obj->rewrite ) && $type_obj->rewrite === false ) {
+				$front = '';
+			}
+			else if ( is_array( $type_obj->rewrite ) ) {
+				if ( isset( $type_obj->rewrite['with_front'] ) && is_bool( $type_obj->rewrite['with_front'] ) && $type_obj->rewrite['with_front'] === false ) {
+					$front = '';
+				}
+			}
 
 			$replace = array( preg_replace( '/^\//', '', $front ), $slug, $wp_rewrite->rewritereplace[0], $wp_rewrite->rewritereplace[1], $wp_rewrite->rewritereplace[2], $date );
 
