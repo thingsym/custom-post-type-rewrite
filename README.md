@@ -46,6 +46,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.2.0
+	* edit README
+	* add test case
+	* fix the priority of the rewrite rule of register_post_type()
 * Version 1.1.4
 	* change mysql from version 8.0 to version 5.7 using docker image
 	* fix indent style
