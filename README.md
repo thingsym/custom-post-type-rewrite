@@ -1,6 +1,7 @@
 # Introducing Custom Post Type Rewrite
 
-This WordPress plugin adds default custom post type permalinks.
+Custom Post Type Rewrite plugin adds default custom post type permalinks.
+ plugin adds default custom post type permalinks.
 
 ## Add permalink structure of custom post type
 
@@ -28,21 +29,39 @@ Custom Post Type Rewrite is hosted on the WordPress Plugin Directory.
 
 [https://wordpress.org/plugins/custom-post-type-rewrite/](https://wordpress.org/plugins/custom-post-type-rewrite/)
 
-## Test Matrix
-
-For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
-
 ## Contribution
+
+Small patches and bug reports can be submitted a issue tracker in Github.
+
+* VCS - Github: [https://github.com/thingsym/custom-post-type-rewrite/](https://github.com/thingsym/custom-post-type-rewrite/)
+
+You can also contribute by answering issues on the forums.
+
+* Forum: [https://wordpress.org/support/plugin/custom-post-type-rewrite/](https://wordpress.org/support/plugin/custom-post-type-rewrite/)
+* Issues: [https://github.com/thingsym/custom-post-type-rewrite/issues](https://github.com/thingsym/custom-post-type-rewrite/issues)
 
 ### Patches and Bug Fixes
 
-Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
+Forking on Github is another good way. You can send a pull request.
 
 1. Fork [Custom Post Type Rewrite](https://github.com/thingsym/custom-post-type-rewrite) from GitHub repository
 2. Create a feature branch: git checkout -b my-new-feature
 3. Commit your changes: git commit -am 'Add some feature'
 4. Push to the branch: git push origin my-new-feature
 5. Create new Pull Request
+
+### Contribute guidlines
+
+If you would like to contribute, here are some notes and guidlines.
+
+* All development happens on the **develop** branch, so it is always the most up-to-date
+* The **master** branch only contains tagged releases
+* If you are going to be submitting a pull request, please submit your pull request to the **develop** branch
+* See about [forking](https://help.github.com/articles/fork-a-repo/) and [pull requests](https://help.github.com/articles/using-pull-requests/)
+
+## Test Matrix
+
+For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
 
 ## Changelog
 

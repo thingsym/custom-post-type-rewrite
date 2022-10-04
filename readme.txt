@@ -11,11 +11,15 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This WordPress plugin adds default custom post type permalinks.
+Custom Post Type Rewrite plugin adds default custom post type permalinks.
 
 == Description ==
 
-By default, there are no some permalinks of custom post type. The Custom Post Type Rewrite plugin adds permalink structure of custom post type. Following:
+Custom Post Type Rewrite plugin adds default custom post type permalinks.
+
+By default, there are no some permalinks of custom post type.
+The Custom Post Type Rewrite plugin adds permalink structure of custom post type.
+Following:
 
 * date-based
 * author-based
@@ -33,16 +37,36 @@ Note: Regarding has_archive and rewrite in $args of Parameters, the priority of 
 
 **IMPORTANT**: By default, WordPress will not work the Custom Post Type Rewrite. You need to refresh permalinks.
 
-= Test Matrix =
+= Support =
 
-For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
+If you have any trouble, you can use the forums or report bugs.
+
+* Forum: [https://wordpress.org/support/plugin/custom-post-type-rewrite/](https://wordpress.org/support/plugin/custom-post-type-rewrite/)
+* Issues: [https://github.com/thingsym/custom-post-type-rewrite/issues](https://github.com/thingsym/custom-post-type-rewrite/issues)
 
 = Contribution =
 
 Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
 
-* [custom-post-type-rewrite - GitHub](https://github.com/thingsym/custom-post-type-rewrite)
-* [Custom Post Type Rewrite - WordPress Plugin](https://wordpress.org/plugins/custom-post-type-rewrite/)
+* [VCS - GitHub](https://github.com/thingsym/custom-post-type-rewrite)
+* [Homepage - WordPress Plugin](https://wordpress.org/plugins/custom-post-type-rewrite/)
+
+You can also contribute by answering issues on the forums.
+
+* Forum: [https://wordpress.org/support/plugin/custom-post-type-rewrite/](https://wordpress.org/support/plugin/custom-post-type-rewrite/)
+* Issues: [https://github.com/thingsym/custom-post-type-rewrite/issues](https://github.com/thingsym/custom-post-type-rewrite/issues)
+
+= Patches and Bug Fixes =
+
+Forking on Github is another good way. You can send a pull request.
+
+1. Fork [Custom Post Type Rewrite](https://github.com/thingsym/custom-post-type-rewrite) from GitHub repository
+2. Create a feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Create new Pull Request
+
+= Contribute guidlines =
 
 If you would like to contribute, here are some notes and guidlines.
 
@@ -50,6 +74,10 @@ If you would like to contribute, here are some notes and guidlines.
 * The **master** branch only contains tagged releases
 * If you are going to be submitting a pull request, please submit your pull request to the **develop** branch
 * See about [forking](https://help.github.com/articles/fork-a-repo/) and [pull requests](https://help.github.com/articles/using-pull-requests/)
+
+= Test Matrix =
+
+For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
 
 == Changelog ==
 
