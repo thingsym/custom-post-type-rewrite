@@ -4,7 +4,7 @@ Contributors: thingsym
 Link: https://github.com/thingsym/custom-post-type-rewrite
 Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Tested up to: 6.2.0
 Requires at least: 4.9
 Requires PHP: 5.6
@@ -80,6 +80,13 @@ If you would like to contribute, here are some notes and guidlines.
 For operation compatibility between PHP version and WordPress version, see below [Github Actions](https://github.com/thingsym/custom-post-type-rewrite/actions).
 
 == Changelog ==
+
+= 1.2.1 =
+* tested up to 6.2.0
+* fix composer scripts
+* update github actions
+* add support section and enhance contribution section to README
+* fix license
 
 = 1.2.0 =
 * edit README

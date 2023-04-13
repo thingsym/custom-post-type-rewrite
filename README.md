@@ -65,6 +65,12 @@ For operation compatibility between PHP version and WordPress version, see below
 
 ## Changelog
 
+* Version 1.2.1
+	* tested up to 6.2.0
+	* fix composer scripts
+	* update github actions
+	* add support section and enhance contribution section to README
+	* fix license
 * Version 1.2.0
 	* edit README
 	* add test case
