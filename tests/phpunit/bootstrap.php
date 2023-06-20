@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package Nav_Menu_Trim
+ * @package Custom_Post_Type_Rewrite
  */
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
