@@ -1,7 +1,7 @@
 <?php
 
 class Custom_Post_Type_Rewrite__Post_Type_Rewrite_Slug_03_Test extends WP_UnitTestCase {
-	public $custom_post_type_rewrite;
+	public $Custom_Post_Type_Rewrite;
 
 	public function setUp(): void {
 		parent::setUp();

@@ -12,7 +12,7 @@ class Test_Custom_Post_Type_Rewrite_Basic extends WP_UnitTestCase {
 
 	public function setUp() {
 		parent::setUp();
-		$this->custom_post_type_rewrite = new Custom_Post_Type_Rewrite();
+		$this->Custom_Post_Type_Rewrite = new Custom_Post_Type_Rewrite();
 	}
 
 	/**
