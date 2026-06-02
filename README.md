@@ -1,7 +1,6 @@
 # Introducing Custom Post Type Rewrite
 
 Custom Post Type Rewrite plugin adds default custom post type permalinks.
- plugin adds default custom post type permalinks.
 
 ## Add permalink structure of custom post type
 
