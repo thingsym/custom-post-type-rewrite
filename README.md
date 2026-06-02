@@ -1,7 +1,6 @@
 # Introducing Custom Post Type Rewrite
 
 Custom Post Type Rewrite plugin adds default custom post type permalinks.
- plugin adds default custom post type permalinks.
 
 ## Add permalink structure of custom post type
 
@@ -65,72 +64,83 @@ For operation compatibility between PHP version and WordPress version, see below
 
 ## Changelog
 
+* Version 1.2.2
+  * tested up to 7.0
+  * change requires at least to wordpress 5.9
+  * change requires to PHP 7.4
+  * fix plugin_textdomain rel path
+  * fix test case
+  * add phpcs job
+  * update github workflows
+  * update phpunit v9 and wpcs v3
+  * update composer dependencies
+  * update wp-tests script
 * Version 1.2.1
-	* tested up to 6.2.0
-	* fix composer scripts
-	* update github actions
-	* add support section and enhance contribution section to README
-	* fix license
+  * tested up to 6.2.0
+  * fix composer scripts
+  * update github actions
+  * add support section and enhance contribution section to README
+  * fix license
 * Version 1.2.0
-	* edit README
-	* add test case
-	* fix the priority of the rewrite rule of register_post_type()
+  * edit README
+  * add test case
+  * fix the priority of the rewrite rule of register_post_type()
 * Version 1.1.4
-	* change mysql from version 8.0 to version 5.7 using docker image
-	* fix indent style
-	* change plugin initialization to wp_loaded hook
+  * change mysql from version 8.0 to version 5.7 using docker image
+  * fix indent style
+  * change plugin initialization to wp_loaded hook
 * Version 1.1.3
-	* fix 'Trying to get property 'permalink_structure' of non-object' warning
-	* change plugin initialization to plugins_loaded hook
-	* replace assert from assertEquals to assertSame
+  * fix 'Trying to get property 'permalink_structure' of non-object' warning
+  * change plugin initialization to plugins_loaded hook
+  * replace assert from assertEquals to assertSame
 * Version 1.1.2
-	* update wp-plugin-unit-test.yml
-	* bump up yoast/phpunit-polyfills version
-	* change os to ubuntu-20.04 for ci
-	* add Upgrade Notice
-	* change requires at least to wordpress 4.9
-	* change requires to PHP 5.6
+  * update wp-plugin-unit-test.yml
+  * bump up yoast/phpunit-polyfills version
+  * change os to ubuntu-20.04 for ci
+  * add Upgrade Notice
+  * change requires at least to wordpress 4.9
+  * change requires to PHP 5.6
 * Version 1.1.1
-	* add timeout-minutes to workflows
-	* add phpunit-polyfills
-	* tested up to 5.8.0
-	* add .editorconfig
+  * add timeout-minutes to workflows
+  * add phpunit-polyfills
+  * tested up to 5.8.0
+  * add .editorconfig
 * Version 1.1.0
-	* tested up to 5.7.0
-	* separate a class into a class file
-	* add test case
-	* add sponsor link
-	* add FUNDING.yml
-	* add donate link
-	* update wordpress-test-matrix
-	* add GitHub actions for CI/CD, remove .travis.yml
+  * tested up to 5.7.0
+  * separate a class into a class file
+  * add test case
+  * add sponsor link
+  * add FUNDING.yml
+  * add donate link
+  * update wordpress-test-matrix
+  * add GitHub actions for CI/CD, remove .travis.yml
 * Version 1.0.4
-	* fix rewrite_rule
+  * fix rewrite_rule
 * Version 1.0.3
-	* fix indent and reformat with phpcs and phpcbf
-	* add composer.json for test
-	* add static code analysis config
-	* change Requires at least from 3.4.1 to 3.8
+  * fix indent and reformat with phpcs and phpcbf
+  * add composer.json for test
+  * add static code analysis config
+  * change Requires at least from 3.4.1 to 3.8
 * Version 1.0.2
-	* fix add_rewrite_rule
-	* fix date-based permalink structure
-	* fix phpunit tests
+  * fix add_rewrite_rule
+  * fix date-based permalink structure
+  * fix phpunit tests
 * Version 1.0.1
-	* refactoring
-	* add phpunit and tests
+  * refactoring
+  * add phpunit and tests
 * Version 1.0.0
-	* Initial release
+  * Initial release
 
 ## Upgrade Notice
 
 * Version 1.2.2
-* Requires at least version 5.9 of the WordPress
-* Requires PHP version 7.4
+  * Requires at least version 5.9 of the WordPress
+  * Requires PHP version 7.4
 * Version 1.1.2
-	* Requires at least version 4.9 of the WordPress
-	* Requires PHP version 5.6
+  * Requires at least version 4.9 of the WordPress
+  * Requires PHP version 5.6
 * Version 1.0.2
-	* Requires at least version 3.8 of the WordPress
+  * Requires at least version 3.8 of the WordPress
 
 ## License
 
