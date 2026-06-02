@@ -24,4 +24,4 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/class-custom-post-type-rewrite.p
 
 if ( class_exists( 'Custom_Post_Type_Rewrite' ) ) {
 	new Custom_Post_Type_Rewrite();
-};
+}
