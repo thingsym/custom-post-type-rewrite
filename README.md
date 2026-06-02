@@ -64,6 +64,17 @@ For operation compatibility between PHP version and WordPress version, see below
 
 ## Changelog
 
+* Version 1.2.2
+  * tested up to 7.0
+  * change requires at least to wordpress 5.9
+  * change requires to PHP 7.4
+  * fix plugin_textdomain rel path
+  * fix test case
+  * add phpcs job
+  * update github workflows
+  * update phpunit v9 and wpcs v3
+  * update composer dependencies
+  * update wp-tests script
 * Version 1.2.1
   * tested up to 6.2.0
   * fix composer scripts
