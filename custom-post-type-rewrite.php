@@ -3,7 +3,7 @@
  * Plugin Name: Custom Post Type Rewrite
  * Plugin URI:  https://github.com/thingsym/custom-post-type-rewrite
  * Description: This WordPress plugin adds default custom post type permalinks.
- * Version:     1.2.1
+ * Version:     1.2.2
  * Author:      thingsym
  * Author URI:  http://www.thingslabo.com/
  * License:     GPLv2 or later
@@ -24,4 +24,4 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/class-custom-post-type-rewrite.p
 
 if ( class_exists( 'Custom_Post_Type_Rewrite' ) ) {
 	new Custom_Post_Type_Rewrite();
-};
+}
