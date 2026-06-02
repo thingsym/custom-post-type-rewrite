@@ -5,7 +5,7 @@ Link: https://github.com/thingsym/custom-post-type-rewrite
 Donate link: https://github.com/sponsors/thingsym
 Tags: custom post type, permalink structure, permalink, permalinks
 Stable tag: 1.2.1
-Tested up to: 6.6.1
+Tested up to: 7.0
 Requires at least: 5.9
 Requires PHP: 7.4
 License: GPLv2 or later
